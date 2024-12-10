@@ -45,9 +45,9 @@
       const title = `100 gangestykker med ${mainNumber}`;
       document.title = title;
 
-      const seed = `${(
+      const seed = (
         new URLSearchParams(document.location.search).get("seed") || "apple"
-      ).trim()} ${mainNumber}`;
+      ).trim();
       const seedArray = cyrb128(seed);
       const consistentRand = sfc32(
         seedArray[0],
