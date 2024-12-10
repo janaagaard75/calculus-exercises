@@ -3,6 +3,12 @@
   <head>
     <script src="main.js"></script>
     <script>
+      const mainNumber =
+        Number(new URLSearchParams(document.location.search).get("number")) ||
+        3;
+      const title = `100 gangestykker med ${mainNumber}`;
+      document.title = title;
+
       const problems = [];
       for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 10; j++) {
