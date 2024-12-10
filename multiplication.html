@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
-    <title>100 plusstykker</title>
     <script>
       // https://stackoverflow.com/a/47593316/37147
       function cyrb128(str) {
@@ -40,8 +39,15 @@
         };
       }
 
-      const seed =
-        new URLSearchParams(document.location.search).get("seed") || "apple";
+      const mainNumber =
+        Number(new URLSearchParams(document.location.search).get("number")) ||
+        3;
+      const title = `100 gangestykker med ${mainNumber}`;
+      document.title = title;
+
+      const seed = `${(
+        new URLSearchParams(document.location.search).get("seed") || "apple"
+      ).trim()} ${mainNumber}`;
       const seedArray = cyrb128(seed);
       const consistentRand = sfc32(
         seedArray[0],
@@ -51,9 +57,10 @@
       );
 
       const problems = [];
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 10; j++) {
-          problems.push([i, j]);
+          problems.push([mainNumber, j]);
+          problems.push([j, mainNumber]);
         }
       }
 
@@ -65,42 +72,44 @@
         return `<td style="
           border-width: 0.1rem;
           padding: 0.4rem;
-          width: 5rem;
-        ">${a} + ${b} =</td>
-        <td style="border-width: 0.1rem; width: 4rem"></td>`;
+          width: 20%;
+        ">${a} &times; ${b} =</td>`;
       }
     </script>
   </head>
   <body style="font-family: sans-serif">
-    <script>
-      document.write(`<h1>${document.title}</h1>`);
-      document.write(`
-        <table
-          border="1"
-          style="
-            border-collapse: collapse;
-            border-width: 0.1rem;
-            font-size: 1.3rem;
-            font-variant-numeric: tabular-nums;
-          "
-        >`);
+    <h1>
+      <script>
+        document.write(title);
+      </script>
+    </h1>
+    <table
+      border="1"
+      style="
+        border-collapse: collapse;
+        border-width: 0.1rem;
+        font-size: 1.3rem;
+        font-variant-numeric: tabular-nums;
+        max-width: 40rem;
+        width: 100%;
+      "
+    >
+      <script>
+        for (let r = 0; r < 20; r++) {
+          document.write("<tr>");
 
-      for (let j = 0; j < 20; j++) {
-        document.write("<tr>");
+          for (let c = 0; c < 5; c++) {
+            document.write(getCells());
+          }
 
-        for (let i = 0; i < 5; i++) {
-          document.write(getCells());
+          document.write("</tr>");
         }
-
-        document.write("</tr>");
-      }
-
-      document.write("</table>");
-      document.write(`<p style="
-        font-size: 80%;
-        color: #666;
-        margin-top: 3rem;
-      ">Seed: ${seed}</p>`);
-    </script>
+      </script>
+    </table>
+    <p style="font-size: 80%; color: #666; margin-top: 3rem">
+      <script>
+        document.write(`Seed: ${seed}`);
+      </script>
+    </p>
   </body>
 </html>
