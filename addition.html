@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
+    <meta charset="utf-8" />
     <title>100 plusstykker</title>
     <script>
       // https://stackoverflow.com/a/47593316/37147
@@ -71,6 +72,12 @@
         font-family: sans-serif;
       }
 
+      .license {
+        color: #666;
+        font-size: 80%;
+        margin-top: 0.5rem;
+      }
+
       .mainTable {
         border-collapse: collapse;
         border-width: 0.1rem;
@@ -92,9 +99,9 @@
       }
 
       .seed {
-        font-size: 80%;
         color: #666;
-        margin-top: 3rem;
+        font-size: 80%;
+        margin-top: 2rem;
       }
     </style>
   </head>
@@ -121,6 +128,11 @@
       <script>
         document.write(`Seed: ${seed}`);
       </script>
+    </p>
+    <p class="license">
+      Denne side er licenseret under
+      <a href="https://opensource.org/license/mit">MIT-licensen</a> og må frit
+      kopieres og distribueres.
     </p>
   </body>
 </html>
