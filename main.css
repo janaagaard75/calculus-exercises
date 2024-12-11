@@ -2,8 +2,13 @@
   font-family: sans-serif;
 }
 
-.license {
+.license,
+.license a,
+.license a:visited {
   color: #666;
+}
+
+.license {
   font-size: 80%;
   margin-top: 1.5rem;
 }
