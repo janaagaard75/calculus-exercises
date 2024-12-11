@@ -10,7 +10,6 @@
 
 .mainTable {
   border-collapse: collapse;
-  border-width: 0.1rem;
   font-size: 1.3rem;
   font-variant-numeric: tabular-nums;
   width: 100%;
@@ -23,7 +22,9 @@
 }
 
 .mainTd {
-  border-width: 0.1rem;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.07rem;
   padding: 0.4rem;
   width: 20%;
 }
