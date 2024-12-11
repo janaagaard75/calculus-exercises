@@ -46,10 +46,10 @@ const consistentRand = sfc32(
   seedArray[3]
 );
 
-function getCells() {
+function getCells(operation) {
   const problemNumber = Math.floor(consistentRand() * problems.length);
   const [a, b] = problems[problemNumber];
   problems.splice(problemNumber, 1);
 
-  return `<td class="mainTd">${a} + ${b} =</td>`;
+  return `<td class="mainTd">${a} ${operation} ${b} =</td>`;
 }
