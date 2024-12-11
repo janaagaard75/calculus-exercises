@@ -3,6 +3,7 @@
 Sider med regneskytter til børn, der lige er startet i skole og er ved at lære de første basale regneoperationer.
 
 - [100 plusstykker](https://janaagaard.com/calculus-exercises/addition.html?seed=apple)
+- [100 gangestykker med 2](https://janaagaard.com/calculus-exercises/multiplication.html?seed=apple&number=3)
 - [100 gangestykker med 3](https://janaagaard.com/calculus-exercises/multiplication.html?seed=apple&number=3)
 - [100 gangestykker med 4](https://janaagaard.com/calculus-exercises/multiplication.html?seed=orange&number=4)
 - [100 gangestykker med 5](https://janaagaard.com/calculus-exercises/multiplication.html?seed=strawberry&number=5)
