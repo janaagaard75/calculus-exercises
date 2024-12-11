@@ -1,6 +1,6 @@
 # Regnestykker
 
-Sider med regneskytter til børn, der lige er startet i skole og er ved at lære de første basale regneoperationer.
+Sider med regneskytter til børn, der lige er startet i skole og er ved at lære at regne. De kan eventuelt tages på tid, f.eks. fem minutter.
 
 - [100 plusstykker](https://janaagaard.com/calculus-exercises/addition.html?seed=apple)
 - [100 gangestykker med 2](https://janaagaard.com/calculus-exercises/multiplication.html?seed=cherry&number=2)
