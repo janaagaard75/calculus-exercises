@@ -2,15 +2,17 @@
   font-family: sans-serif;
 }
 
-.license,
-.license a,
-.license a:visited {
-  color: #666;
-}
-
 .license {
+  color: #666;
   font-size: 80%;
   margin-top: 1.5rem;
+}
+
+@media screen {
+  .license a,
+  .license a:visited {
+    color: #666;
+  }
 }
 
 .mainTable {
