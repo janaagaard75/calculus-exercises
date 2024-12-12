@@ -9,6 +9,14 @@
   margin-top: 1.5rem;
 }
 
+.license a {
+  color: #99f;
+}
+
+.license a:visited {
+  color: #c9c;
+}
+
 @media print {
   .license a,
   .license a:visited {
