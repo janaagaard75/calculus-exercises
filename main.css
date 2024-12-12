@@ -3,7 +3,7 @@
 }
 
 .license {
-  color: #666;
+  color: #999;
   font-size: 80%;
   line-height: 1.4;
   margin-top: 1.5rem;
@@ -12,7 +12,7 @@
 @media print {
   .license a,
   .license a:visited {
-    color: #666;
+    color: #999;
   }
 }
 
