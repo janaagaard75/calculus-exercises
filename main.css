@@ -21,6 +21,7 @@
   .license a,
   .license a:visited {
     color: #999;
+    underline: none;
   }
 }
 
